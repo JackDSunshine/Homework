@@ -15,7 +15,7 @@ import java.awt.datatransfer.*;
 import java.awt.event.*;
 import java.io.*;
 
-public class Notepad extends JFrame implements ActionListener {
+public class TNS extends JFrame implements ActionListener {
 
 
     //窗体和输入区域
@@ -28,7 +28,7 @@ public class Notepad extends JFrame implements ActionListener {
 
     UndoManager undoManager = new UndoManager();// 撤销管理器
 
-    public Notepad() {
+    public TNS() {
         initComponment();// 面板初始化
     }
 
@@ -163,7 +163,7 @@ public class Notepad extends JFrame implements ActionListener {
                         && (ke.isControlDown()))
                 {
                     // 查找对话框
-                    JDialog search = new JDialog(Notepad.this, "查找和替换");
+                    JDialog search = new JDialog(TNS.this, "查找和替换");
                     search.setSize(200, 100);
                     search.setLocation(450, 350);
                     JLabel label_1 = new JLabel("查找的内容");
@@ -538,7 +538,7 @@ public class Notepad extends JFrame implements ActionListener {
         myarea.replaceSelection("");
     }
     public static void main(String[] args) {
-        new Notepad().setVisible(true);
+        new TNS().setVisible(true);
     }
 }
 
